@@ -1,4 +1,4 @@
-﻿// Copyright (c) ppy Pty Ltd <contact@ppy.sh>. Licensed under the MIT Licence.
+// Copyright (c) ppy Pty Ltd <contact@ppy.sh>. Licensed under the MIT Licence.
 // See the LICENCE file in the repository root for full licence text.
 
 using System;
@@ -183,6 +183,7 @@ namespace osu.Desktop.Deploy
                     // package for distribution
                     runCommand("ditto", $"-ck --rsrc --keepParent --sequesterRsrc {stagingPath}/osu!.app {releasesPath}/osu!.app.zip");
                     break;
+
                     case RuntimeInfo.Platform.Linux:
 
                     //runCommand("rm",$"-rf {stagingPath}/osu.AppDir/"); //we clean this for next build (for example: changing dir structure). Delete if unneded
